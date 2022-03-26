@@ -7,7 +7,7 @@ function renderBoard(mat, selector) {
         for (var j = 0; j < mat[0].length; j++) {
             var cell = mat[i][j];
             var className = 'cell cell-' + i + '-' + j + ' + notpressed';
-            strHTML += '<td oncontextmenu="onRightClick(event,this)" onclick = "cellClicked(this)" class="' + className + '">  </td>'
+            strHTML += '<td oncontextmenu="onRightClick(event,this)" onclick="cellClicked(this)" class="' + className + '">  </td>'
         }
         strHTML += '</tr>'
     }
@@ -26,10 +26,10 @@ function createMat(length) {
         mat[i] = []
         for (var j = 0; j < length; j++) {
             mat[i][j] = {
-                minesAroundCount: 4,
+                minesAroundCount: 0,
                 isShown: false,
                 isMine: false,
-                isMarked: true
+                isMarked: false
             }
         }
     }

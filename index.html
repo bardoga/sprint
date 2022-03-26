@@ -11,10 +11,17 @@
 
 <body onload="InitGame()">
     <h1>Minesweeper</h1>
-    <div class="heart"> Life:❤️❤️❤️</div>
-    <div id="stopwatch">00:00:00</div>
-    <div class="mines">Mines left:<span></span></div> <br>
-    <div class="board-container"></div>
+    <div class="heart"> Life:❤️❤️❤️</div> <br>
+    <div class="player" onclick="gameOver()"></div>
+    <div id="stopwatch">00:00:00</div> <br>
+    <div class="flags">Flags left:<span>2</span></div> <br>
+    <div class="board-container"></div> <br>
+    <div class="btn">
+        <button onclick="setLevel(4)"> Beginner</button>
+        <button onclick="setLevel(8)"> Medium</button>
+        <button onclick="setLevel(12)"> Expert</button>
+    </div> <br>
+    <footer>@Yonatan Shamaev</footer>
     <script src="js/mines.js"></script>
     <script src="js/timer.js"></script>
     <script src="js/utils.js"></script>

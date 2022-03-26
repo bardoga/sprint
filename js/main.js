@@ -104,6 +104,7 @@ function showNegs(elCell) {
         var count = countNeighbors(gCell2.i, gCell2.j, gBoard)
         switch (count) {
             case 0:
+                // showNegs(gCell2);
                 break
             case 1:
                 renderCelltoText(gCell2, '1')
@@ -129,10 +130,8 @@ function showNegs(elCell) {
             case 8:
                 renderCelltoText(gCell2, '8')
                 break;
-
         }
     }
-
 }
 
 
@@ -161,9 +160,8 @@ function highlightNegs(gNegs) {
     for (var i = 0; i < gNegs.length; i++) {
         var posi = gNegs.i[i]
         var posj = gNegs.j[i]
-
-        // console.log(gNegs[i])
-        // debugger
+            // console.log(gNegs[i])
+            // debugger
         gNegs[i].document.querySelector(`.cell-${posi}-${posj}`).classList.remove("notpressed");
     }
 

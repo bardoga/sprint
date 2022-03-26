@@ -37,5 +37,6 @@ function countNeighbors(cellI, cellJ, mat) {
     }
 
     console.log(gNegs)
+    // mat[cellI][cellJ].minesAroundCount = counter
     return counter;
 }
